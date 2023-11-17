@@ -1,5 +1,5 @@
 ![SharperHacks logo](SHLLC-Logo.jpg)
-# Constraints Library for .NET
+# Constants Library for .NET
 ## SharperHacks.CoreLibs.Constants.
 
 Defines useful constants grouped by class.
