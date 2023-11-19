@@ -40,7 +40,7 @@
     <Deterministic>true</Deterministic>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <PathMap>$(MSBuildThisFileDirectory)={SHLLC/CoreLibs/Constraints}/</PathMap>
+    <PathMap>$(MSBuildThisFileDirectory)={SHLLC/CoreLibs/$(MSBuildProjectName)}/</PathMap>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0|AnyCPU'">
