@@ -16,7 +16,7 @@
 // applied to distributions of derivative works, without the express written
 // permission of a registered officer of Sharper Hacks LLC (US-WA).
 
-namespace SharperHacks.CoreLibes.Constants;
+namespace SharperHacks.CoreLibs.Constants;
 
 /// <summary>
 /// A collection of useful time constants.
