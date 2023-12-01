@@ -24,7 +24,7 @@ namespace SharperHacks.CoreLibs.Constants;
 /// <remarks>
 /// These are here to avoid cirucular dependency between LogWrappers and AppConfig.
 /// </remarks>
-enum LogLevels
+public enum LogLevel
 {
     /// <summary>
     /// Anything and everything you might want to know about a running block of code.
