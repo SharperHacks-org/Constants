@@ -11,7 +11,6 @@ Contact: joseph@sharperhacks.org
 Nuget: https://www.nuget.org/packages/SharperHacks.CoreLibs.Constants
 
 ### Targets
-- net6.0
 - net7.0
 - net8.0
 
@@ -19,9 +18,6 @@ Nuget: https://www.nuget.org/packages/SharperHacks.CoreLibs.Constants
 
 #### Characters
 A collection of character constants.
-
-#### SerializerOptions
-Provides predefined serializer options.
 
 #### StandardSets
 A collection of immutable sets.
@@ -31,7 +27,3 @@ A collection of standard time symbols (WIP).
 
 #### Strings
 A colleciton of useful string constants (WIP).
-
-
-
-
