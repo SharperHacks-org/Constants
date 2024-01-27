@@ -1,3 +1,18 @@
+// Copyright and trademark notices at the end of this file.
+
+namespace SharperHacks.CoreLibs.Constants;
+
+/// <summary>
+/// A colleciton of useful string constants.
+/// </summary>
+public static class Strings
+{
+    /// <summary>
+    /// A string containing a pair of hyphens.
+    /// </summary>
+    public const string DoubleHyphen = "--";
+}
+
 // Copyright Joseph W Donahue and Sharper Hacks LLC (US-WA)
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,14 +31,3 @@
 // applied to distributions of derivative works, without the express written
 // permission of a registered officer of Sharper Hacks LLC (US-WA).
 
-namespace SharperHacks.CoreLibs.Constants;
-
-/// <summary>
-/// A colleciton of useful string constants.
-/// </summary>
-public static class Strings
-{
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-    public const string DoubleHyphen = "--";
-#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
-}
