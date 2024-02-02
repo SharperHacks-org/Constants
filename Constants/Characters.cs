@@ -3,8 +3,12 @@
 namespace SharperHacks.CoreLibs.Constants;
 
 /// <summary>
-/// A collection of character constants.
+/// A collection of (mostly ASCII/lower-UTF8) character constants.
 /// </summary>
+/// <remarks>
+/// WIP. Started with bits I needed for another project, and occassionally adding
+/// new characters as I need them (plus a few extra as I go).
+/// </remarks>
 public static class Characters
 {
     // ToDo: Fill in all non-alphanumeric characters in the lower 256 code point range.
@@ -14,6 +18,12 @@ public static class Characters
 
     ///
     public const char Period = '.';
+
+    ///
+    public const char Colon = ':';
+
+    ///
+    public const char Semicolon = ';';
 
     ///
     public const char OpenBrace = '{';
@@ -28,13 +38,40 @@ public static class Characters
     public const char CloseBracket = ']';
 
     ///
+    [Obsolete("Use LeftParens instead.")]
     public const char OpenParen = '(';
 
-    ///
-    public const char CloseParen = ')';
+    /// <summary>
+    /// Left parenthesis (U+0028). AKA: open parenthesis.
+    /// </summary>
+    /// <remarks>
+    /// See https://en.wikipedia.org/wiki/Bracket#Parentheses_or_(round)_brackets.
+    /// </remarks>
+    public const char LeftParens = '(';
 
     ///
+    [Obsolete("Use RightParens instead.")]
+    public const char CloseParen = ')';
+
+    /// <summary>
+    /// Right parenthesis (U+0029). AKA: right parenthesis.
+    /// </summary>
+    /// <remarks>
+    /// See https://en.wikipedia.org/wiki/Bracket#Parentheses_or_(round)_brackets.
+    /// </remarks>
+    public const char RightParens = ')';
+
+    ///
+    [Obsolete("Use HyphenMinus instead.")]
     public const char Hyphen = '-';
+
+    /// <summary>
+    /// Hyphen-minus (U+002D).
+    /// </summary>
+    /// <remarks>
+    /// See https://en.wikipedia.org/wiki/Plus_and_minus_signs#Minus_sign.
+    /// </remarks>
+    public const char HyphenMinus = '-';
 
     ///
     public const char Space = ' ';
@@ -48,7 +85,7 @@ public static class Characters
     public const char Exclamation = '!';
 
     /// <summary>
-    /// Asperand, AKA "at symbol".
+    /// Asperand (U+0026), AKA "at symbol".
     /// </summary>
     [Obsolete($"Use 'Characters.At' instead. This will be removed in the next major release.")]
     public const char Asperand = '@';
@@ -79,9 +116,58 @@ public static class Characters
     public const char DollarSign = '$';
 
     /// <summary>
+    /// Percent sign (U+2052). Parts per hundred.
+    /// </summary>
+    /// <remarks>
+    /// See https://en.wikipedia.org/wiki/Percent_sign.
+    /// </remarks>
+    public const char Percent = '%';
+
+    /// <summary>
+    /// Per mille sign (U+2030). Parts per thousand.
+    /// </summary>
+    /// <remarks>
+    /// See https://en.wikipedia.org/wiki/Per_mille.
+    /// </remarks>
+    public const char Permille = '‰';
+
+    /// <summary>
+    /// Permyriad sign (U+2031). AKA: basis point, one hundredth of one percent,
+    /// or one tenthousandth.
+    /// </summary>
+    /// <remarks>
+    /// See https://en.wikipedia.org/wiki/Basis_point.
+    /// </remarks>
+    public const char Permyriad = '‱';
+
+    /// <inheritdoc cref="Permyriad"/>
+    public const char BasisPoint = Permyriad;
+
+    /// <summary>
+    /// Caret (U+005E), AKA: circumflex or circumflex accent, also used in mathmatics
+    /// for exponentiation.
+    /// </summary>
+    /// <remarks>
+    /// See https://en.wikipedia.org/wiki/Caret.
+    /// </remarks>
+    public const char Caret = '^';
+
+    /// <summary>
     /// Ampersand symbol (U+0026), AKA "and" symbol.
     /// </summary>
+    /// <remarks>
+    /// See https://en.wikipedia.org/wiki/Ampersand.
+    /// </remarks>
     public const char Ampersand = '&';
+
+    /// <summary>
+    ///  Asterisk (U+002A). AKA: star in mathematics.
+    /// </summary>
+    /// <remarks>
+    /// See https://en.wikipedia.org/wiki/Asterisk.
+    /// </remarks>
+    public const char Asterisk = '*';
+
 
     //////////////////////////////////////////////////////////
     // These do not map to ASCII or extended ASCII.
