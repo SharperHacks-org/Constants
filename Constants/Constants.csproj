@@ -52,10 +52,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="SharperHacks.CoreLibs.Constraints" Version="2.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="$(SolutionDir)LICENSE" Pack="true" PackagePath="" />
     <None Update="LICENSE">
       <Pack>True</Pack>
