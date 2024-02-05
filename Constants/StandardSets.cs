@@ -115,6 +115,16 @@ public static class StandardSets
     };
     private static ImmutableHashSet<char>? _hexCharSet;
 
+    // ToDo: Are there other characters that should be part of this set?
+    private static readonly char[] _whiteSpace = new[]
+    {
+        Characters.Space,
+        '\n',
+        '\r',
+        '\t',
+    };
+    private static ImmutableHashSet<char>? _whiteSpaceCharSet;
+
     #endregion
 
     /// <summary>
@@ -136,6 +146,11 @@ public static class StandardSets
     /// Hex digit code points.
     /// </summary>
     public static ImmutableHashSet<char> HexDigits => _hexCharSet ??= _hexChars.ToImmutableHashSet();
+
+    /// <summary>
+    /// Non-printable characters, commonly used for horizontal and vertical whitespace/control characters.
+    /// </summary>
+    public static ImmutableHashSet<char> WhiteSpace => _whiteSpaceCharSet ??= _whiteSpace.ToImmutableHashSet();
 }
 
 // Copyright Joseph W Donahue and Sharper Hacks LLC (US-WA)
