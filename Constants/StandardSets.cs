@@ -11,8 +11,8 @@ public static class StandardSets
 {
     #region Private
 
-    private static readonly char[] _upperAlphaChars = new []
-    {
+    private static readonly char[] _upperAlphaChars =
+    [
         'A',
         'B',
         'C',
@@ -39,11 +39,11 @@ public static class StandardSets
         'X',
         'Y',
         'Z'
-    };
+    ];
     private static ImmutableHashSet<char>? _upperAlphaCharSet;
 
-    private static readonly char[] _lowerAlphaChars = new []
-    {
+    private static readonly char[] _lowerAlphaChars =
+    [
         'a',
         'b',
         'c',
@@ -70,11 +70,11 @@ public static class StandardSets
         'x',
         'y',
         'z'
-    };
+    ];
     private static ImmutableHashSet<char>? _lowerAlphaCharSet;
 
-    private static readonly char[] _decimalChars = new[]
-    {
+    private static readonly char[] _decimalChars =
+    [
         '0',
         '1',
         '2',
@@ -85,11 +85,11 @@ public static class StandardSets
         '7',
         '8',
         '9'
-    };
+    ];
     private static ImmutableHashSet<char>? _decimalCharSet;
 
-    private static readonly char[] _hexChars = new[]
-    {
+    private static readonly char[] _hexChars =
+    [
         '0',
         '1',
         '2',
@@ -112,17 +112,17 @@ public static class StandardSets
         'e',
         'F',
         'f'
-    };
+    ];
     private static ImmutableHashSet<char>? _hexCharSet;
 
     // ToDo: Are there other characters that should be part of this set?
-    private static readonly char[] _whiteSpace = new[]
-    {
+    private static readonly char[] _whiteSpace =
+    [
         Characters.Space,
         '\n',
         '\r',
         '\t',
-    };
+    ];
     private static ImmutableHashSet<char>? _whiteSpaceCharSet;
 
     #endregion
@@ -130,27 +130,27 @@ public static class StandardSets
     /// <summary>
     /// Upper alpha character code points (US-EN)
     /// </summary>
-    public static ImmutableHashSet<char> UpperAlphaCharacters => _upperAlphaCharSet ??= _upperAlphaChars.ToImmutableHashSet();
+    public static ImmutableHashSet<char> UpperAlphaCharacters => _upperAlphaCharSet ??= [.. _upperAlphaChars];
 
     /// <summary>
     /// Lower alpha character code points (US-EN)
     /// </summary>
-    public static ImmutableHashSet<char> LowerAlphaCharacters => _lowerAlphaCharSet ??= _lowerAlphaChars.ToImmutableHashSet();
+    public static ImmutableHashSet<char> LowerAlphaCharacters => _lowerAlphaCharSet ??= [.. _lowerAlphaChars];
 
     /// <summary>
     /// Decimal digit code points.
     /// </summary>
-    public static ImmutableHashSet<char> DecimalDigits => _decimalCharSet ??= _decimalChars.ToImmutableHashSet();
+    public static ImmutableHashSet<char> DecimalDigits => _decimalCharSet ??= [.. _decimalChars];
 
     /// <summary>
     /// Hex digit code points.
     /// </summary>
-    public static ImmutableHashSet<char> HexDigits => _hexCharSet ??= _hexChars.ToImmutableHashSet();
+    public static ImmutableHashSet<char> HexDigits => _hexCharSet ??= [.. _hexChars];
 
     /// <summary>
     /// Non-printable characters, commonly used for horizontal and vertical whitespace/control characters.
     /// </summary>
-    public static ImmutableHashSet<char> WhiteSpace => _whiteSpaceCharSet ??= _whiteSpace.ToImmutableHashSet();
+    public static ImmutableHashSet<char> WhiteSpace => _whiteSpaceCharSet ??= [.. _whiteSpace];
 }
 
 // Copyright Joseph W Donahue and Sharper Hacks LLC (US-WA)
