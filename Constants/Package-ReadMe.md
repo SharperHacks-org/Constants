@@ -7,7 +7,7 @@ Licensed under the Apache License, Version 2.0. See [LICENSE](LICENSE).
 
 Contact: [joseph@sharperhacks.org](mailto:joseph@sharperhacks.org)
 
-### Full ReadMe: [https://github.com/SharperHacks-org/Constraints/blob/main/README.md](https://github.com/SharperHacks-org/Constraints/blob/main/README.md)
+### Full ReadMe: [https://github.com/SharperHacks-org/Constants/blob/main/README.md](https://github.com/SharperHacks-org/Constraints/blob/main/README.md)
 
 ### Targets
 - net7.0
