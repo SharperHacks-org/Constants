@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".gitignore" />
+    <File Path="build.cmd" />
+    <File Path="checkinTest.cmd" />
+    <File Path="CopyrightChecks.cmd" />
+    <File Path="Directory.Build.Props" />
+    <File Path="LICENSE" />
+    <File Path="nuget.config" />
+    <File Path="README.md" />
+    <File Path="SHLLC-Logo.jpg" />
+  </Folder>
+  <Project Path="Constants/Constants.csproj" />
+</Solution>
