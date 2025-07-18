@@ -54,6 +54,7 @@
 @if /i "%~nx1" equ "globalsuppressions.cs" @exit /b
 @if /i "%~nx1" equ "usings.cs" @exit /b
 @if /i "%~nx1" equ "globalusings.cs" @exit /b
+@if /i "%~nx1" equ "MSTestSettings.cs" @exit /b
 @set _finalExitCode=1
 @echo Error: Missing copyright notice in file: %~1
 @exit /b
@@ -64,6 +65,7 @@
 @if /i "%~nx1" equ "globalsuppressions.cs" @exit /b
 @if /i "%~nx1" equ "usings.cs" @exit /b
 @if /i "%~nx1" equ "globalusings.cs" @exit /b
+@if /i "%~nx1" equ "MSTestSettings.cs" @exit /b
 @set _finalExitCode=1
 @echo Error: Missing license in file: %~1
 @exit /b

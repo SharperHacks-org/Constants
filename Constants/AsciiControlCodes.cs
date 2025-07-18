@@ -11,6 +11,7 @@ namespace SharperHacks.CoreLibs.Constants;
 /// </summary>
 public static class AsciiControlCodes
 {
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
     public const char NUL = (char)0;
     public const char SOH = (char)1;
     public const char STX = (char)2;
@@ -43,6 +44,52 @@ public static class AsciiControlCodes
     public const char GS = (char)29;
     public const char RS = (char)30;
     public const char US = (char)31;
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
+
+    /// <summary>
+    /// Get the an array, filled with the control codes.
+    /// </summary>
+    public static char[] AsArray
+    {
+        get
+        {
+            return [
+                NUL,
+                SOH,
+                STX,
+                ETX,
+                EOT,
+                ENQ,
+                ACK,
+                BEL,
+                BS,
+                TAB,
+                LF,
+                VT,
+                FF,
+                CR,
+                SO,
+                SI,
+                DLE,
+                DC1,
+                DC2,
+                DC3,
+                DC4,
+                NAK,
+                SYN,
+                ETB,
+                CAN,
+                EM,
+                SUB,
+                ESC,
+                FS,
+                GS,
+                RS,
+                US
+                ];
+        }
+
+    }
 }
 
 // Copyright Joseph W Donahue and Sharper Hacks LLC (US-WA)

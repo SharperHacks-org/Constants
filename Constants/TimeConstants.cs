@@ -1,10 +1,13 @@
 // Copyright and trademark notices at the end of this file.
 
+using System.Diagnostics.CodeAnalysis;
+
 namespace SharperHacks.CoreLibs.Constants;
 
 /// <summary>
 /// A collection of useful time constants.
 /// </summary>
+[ExcludeFromCodeCoverage]
 public static class TimeConstants
 {
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member

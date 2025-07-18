@@ -20,7 +20,7 @@
     <PackageIcon>SHLLC-Logo.jpg</PackageIcon>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/SharperHacks-org/$(MSBuildProjectName)</PackageProjectUrl>
-    <PackageReadMeFile>ReadMe.md</PackageReadMeFile>
+    <PackageReadMeFile>README.md</PackageReadMeFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <PackageTags>Constants</PackageTags>
     <RepositoryType>git</RepositoryType>

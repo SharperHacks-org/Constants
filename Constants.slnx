@@ -12,4 +12,5 @@
     <File Path="SHLLC-Logo.jpg" />
   </Folder>
   <Project Path="Constants/Constants.csproj" />
+  <Project Path="ConstantsUT/ConstantsUT.csproj" Id="813d70f5-596d-4023-be42-10b35055f550" />
 </Solution>

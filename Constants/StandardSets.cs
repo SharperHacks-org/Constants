@@ -4,12 +4,16 @@ using System.Collections.Immutable;
 
 namespace SharperHacks.CoreLibs.Constants;
 
+using CtrlCodes = AsciiControlCodes;
+
 /// <summary>
-/// A collection of immutable sets.
+/// A collection of immutable hash sets.
 /// </summary>
 public static class StandardSets
 {
     #region Private
+
+    private static ImmutableHashSet<char>? _asciiCtrlCodes;
 
     private static readonly char[] _upperAlphaChars =
     [
@@ -119,13 +123,18 @@ public static class StandardSets
     private static readonly char[] _whiteSpace =
     [
         Characters.Space,
-        '\n',
-        '\r',
-        '\t',
+        CtrlCodes.LF, //'\n',
+        CtrlCodes.CR, //'\r',
+        CtrlCodes.TAB, //'\t',
     ];
     private static ImmutableHashSet<char>? _whiteSpaceCharSet;
 
-    #endregion
+    #endregion Private
+
+    /// <summary>
+    /// ASCII control codes. First 32 characters of the ASCII table.
+    /// </summary>
+    public static ImmutableHashSet<char> AsciiControlCodes => _asciiCtrlCodes ??= [.. CtrlCodes.AsArray];
 
     /// <summary>
     /// Upper alpha character code points (US-EN)
