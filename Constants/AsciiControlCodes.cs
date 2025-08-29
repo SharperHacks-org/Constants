@@ -12,42 +12,42 @@ namespace SharperHacks.CoreLibs.Constants;
 public static class AsciiControlCodes
 {
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-    public const char NUL = (char)0;
-    public const char SOH = (char)1;
-    public const char STX = (char)2;
-    public const char ETX = (char)3;
-    public const char EOT = (char)4;
-    public const char ENQ = (char)5;
-    public const char ACK = (char)6;
-    public const char BEL = (char)7;
-    public const char BS = (char)8;
-    public const char TAB = (char)9;
-    public const char LF = (char)10;
-    public const char VT = (char)11;
-    public const char FF = (char)12;
-    public const char CR = (char)13;
-    public const char SO = (char)14;
-    public const char SI = (char)15;
-    public const char DLE = (char)16;
-    public const char DC1 = (char)17;
-    public const char DC2 = (char)18;
-    public const char DC3 = (char)19;
-    public const char DC4 = (char)20;
-    public const char NAK = (char)21;
-    public const char SYN = (char)22;
-    public const char ETB = (char)23;
-    public const char CAN = (char)24;
-    public const char EM = (char)25;
-    public const char SUB = (char)26;
-    public const char ESC = (char)27;
-    public const char FS = (char)28;
-    public const char GS = (char)29;
-    public const char RS = (char)30;
-    public const char US = (char)31;
+    public const char NUL = '\u0000';
+    public const char SOH = '\u0001';
+    public const char STX = '\u0002';
+    public const char ETX = '\u0003';
+    public const char EOT = '\u0004';
+    public const char ENQ = '\u0005';
+    public const char ACK = '\u0006';
+    public const char BEL = '\u0007';
+    public const char BS  = '\u0008';
+    public const char TAB = '\u0009';
+    public const char LF  = '\u000A'; // 10
+    public const char VT  = '\u000B'; // 11
+    public const char FF  = '\u000C'; // 12
+    public const char CR  = '\u000D'; // 13
+    public const char SO  = '\u000E'; // 14
+    public const char SI  = '\u000F'; // 15
+    public const char DLE = '\u0010'; // 16
+    public const char DC1 = '\u0011'; // 17
+    public const char DC2 = '\u0012'; // 18
+    public const char DC3 = '\u0013'; // 19
+    public const char DC4 = '\u0014'; // 20
+    public const char NAK = '\u0015'; // 21
+    public const char SYN = '\u0016'; // 22
+    public const char ETB = '\u0017'; // 23
+    public const char CAN = '\u0018'; // 24
+    public const char EM  = '\u0019'; // 25
+    public const char SUB = '\u001A'; // 26
+    public const char ESC = '\u001B'; // 27
+    public const char FS  = '\u001C'; // 28
+    public const char GS  = '\u001D'; // 29
+    public const char RS  = '\u001E'; // 30
+    public const char US  = '\u001F'; // 31
 #pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 
     /// <summary>
-    /// Get the an array, filled with the control codes.
+    /// Get an array, filled with the control codes.
     /// </summary>
     public static char[] AsArray
     {

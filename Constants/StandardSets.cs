@@ -9,7 +9,7 @@ using CtrlCodes = AsciiControlCodes;
 /// <summary>
 /// A collection of immutable hash sets.
 /// </summary>
-public static class StandardSets
+public static partial class StandardSets
 {
     #region Private
 
@@ -94,28 +94,28 @@ public static class StandardSets
 
     private static readonly char[] _hexChars =
     [
-        '0',
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
-        '7',
-        '8',
-        '9',
-        'A',
-        'a',
-        'B',
-        'b',
-        'C',
-        'c',
-        'D',
-        'd',
-        'E',
-        'e',
-        'F',
-        'f'
+        '0', // U+0030
+        '1', // U+0031
+        '2', // U+0032
+        '3', // U+0033
+        '4', // U+0034
+        '5', // U+0035
+        '6', // U+0036
+        '7', // U+0037
+        '8', // U+0038
+        '9', // U+0039
+        'A', // U+0041
+        'a', // U+0061
+        'B', // U+0042
+        'b', // U+0062
+        'C', // U+0043
+        'c', // U+0063
+        'D', // U+0044
+        'd', // U+0064
+        'E', // U+0045
+        'e', // U+0065
+        'F', // U+0046
+        'f'  // U+0066
     ];
     private static ImmutableHashSet<char>? _hexCharSet;
 

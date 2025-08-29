@@ -72,6 +72,15 @@ public class StandardSetsUT
             32,
             StandardSets.AsciiControlCodes,
             nameof(StandardSets.AsciiControlCodes));
+
+        var ctrlCodeArray = AsciiControlCodes.AsArray;
+
+        Assert.AreEqual(32, ctrlCodeArray.Length);
+
+        for(int idx = 0; idx < 32; idx++)
+        {
+            Assert.AreEqual(idx, ctrlCodeArray[idx]);
+        }
     }
 
     [TestMethod]
