@@ -1,7 +1,5 @@
 // Copyright and trademark notices at the end of this file.
 
-using System.Runtime.CompilerServices;
-
 using static System.Net.WebRequestMethods;
 
 namespace SharperHacks.CoreLibs.Constants;
@@ -414,24 +412,102 @@ public static partial class Characters
     public const char TriplePrime = '\u2034';
 
     /// <summary>
-    /// Reverse Prime (‵).
+    /// Reverse Prime (‵)
     /// </summary>
     public const char ReversedPrime = '\u2035';
 
     /// <summary>
-    /// Reversed Double Prime (‶).
+    /// Reversed Double Prime (‶)
     /// </summary>
     public const char ReversedDoublePrime = '\u2036';
 
     /// <summary>
-    /// Reversed Triple Prime (‷).
+    /// Reversed Triple Prime (‷)
     /// </summary>
     public const char ReversedTriplePrime = '\u2037';
 
     /// <summary>
-    /// Caret 
+    /// Caret (‸)
     /// </summary>
     public const char Caret = '\u2038';
+
+    /// <summary>
+    /// Single Left PointingAngleQuotationMark (‹)
+    /// </summary>
+    public const char SingleLeftPointingAngleQuotationMark = '\u2039';
+
+    /// <inheritdoc cref="SingleLeftPointingAngleQuotationMark"/>
+    public const char SlpaqMark = SingleLeftPointingAngleQuotationMark;
+
+    /// <summary>
+    /// Single Right Pointing Angle Quotation Mark (›)
+    /// </summary>
+    public const char SingleRightPointingAngleQuotationMark = '\u203A';
+
+    /// <inheritdoc cref="SingleRightPointingAngleQuotationMark"/>
+    public const char SrpaqMark = SingleRightPointingAngleQuotationMark;
+
+    /// <summary>
+    /// Reference Mark (※)
+    /// </summary>
+    public const char ReferenceMark = '\u203B';
+
+    /// <summary>
+    /// Double Exclmation Mark (‼)
+    /// </summary>
+    public const char DoubleExclamationMark = '\u203C';
+
+    /// <summary>
+    /// Interrobang (‽)
+    /// </summary>
+    public const char Interrobang = '\u203D';
+
+    /// <summary>
+    /// Overline (‾)
+    /// </summary>
+    public const char Overline = '\u203E';
+
+    /// <summary>
+    /// Undertie (‿)
+    /// </summary>
+    public const char Undertie = '\u203F';
+
+    /// <summary>
+    /// Overtie (⁀)
+    /// </summary>
+    public const char Overtie = '\u2040';
+
+    /// <summary>
+    /// Caret Insertion Point (⁁)
+    /// </summary>
+    public const char CaretInsertionPoint = '\u2041';
+
+    /// <summary>
+    /// Asterism (⁂)
+    /// </summary>
+    public const char Asterism = '\u2042';
+
+    /// <summary>
+    /// Hyphen Bullet (⁃)
+    /// </summary>
+    public const char HyphenBullet = '\u2043';
+
+    /// <summary>
+    /// Fraction Slash (⁄)
+    /// </summary>
+    public const char FractionSlash = '\u2044';
+
+    /// <summary>
+    /// Left Square Bracket with Quil (⁅)
+    /// </summary>
+    public const char LeftSquareBracketWithQuil = '\u2045';
+
+    /// <summary>
+    /// Right Square Bracket with Quil (⁆)
+    /// </summary>
+    public const char RightSquareBracketWithQuilt = '\u2046';
+
+
 }
 
 // Copyright Joseph W Donahue and Sharper Hacks LLC (US-WA)

@@ -119,14 +119,16 @@ public static partial class Characters
     /// </remarks>
     public const char Percent = '%';
 
-/// <summary>
-    /// Caret (U+005E), AKA: circumflex or circumflex accent, also used in mathmatics
-    /// for exponentiation.
+    /// <summary>
+    /// Circumflex or circumflex accent, also used in mathmatics for exponentiation.
     /// </summary>
     /// <remarks>
     /// See https://en.wikipedia.org/wiki/Caret.
     /// </remarks>
     public const char CircumflexAccent = '^';
+
+    /// <inheritdoc cref="CircumflexAccent"/>
+    public const char Circumflex = CircumflexAccent;
 
     /// <summary>
     /// Ampersand symbol (U+0026), AKA "and" symbol.
@@ -144,17 +146,6 @@ public static partial class Characters
     /// </remarks>
     public const char Asterisk = '*';
 
-
-    //////////////////////////////////////////////////////////
-    // These do not map to ASCII or extended ASCII.
-
-    /// <summary>
-    /// Sharp character (U+266F).
-    /// </summary>
-    /// <remarks>
-    /// DO NOT CONFUSE WITH HASH (#) SYMBOL! Not in the lower 127 ASCII/Unicode set.
-    /// </remarks>
-    public const char Sharp = '♯';
 }
 
 // Copyright Joseph W Donahue and Sharper Hacks LLC (US-WA)
