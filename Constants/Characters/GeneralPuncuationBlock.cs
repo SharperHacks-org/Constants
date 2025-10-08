@@ -505,9 +505,7 @@ public static partial class Characters
     /// <summary>
     /// Right Square Bracket with Quil (⁆)
     /// </summary>
-    public const char RightSquareBracketWithQuilt = '\u2046';
-
-
+    public const char RightSquareBracketWithQuil = '\u2046';
 }
 
 // Copyright Joseph W Donahue and Sharper Hacks LLC (US-WA)
