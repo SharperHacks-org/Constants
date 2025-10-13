@@ -75,7 +75,7 @@ public class StandardSetsUT
 
         var ctrlCodeArray = AsciiControlCodes.AsArray;
 
-        Assert.AreEqual(32, ctrlCodeArray.Length);
+        Assert.HasCount(32, ctrlCodeArray);
 
         for(int idx = 0; idx < 32; idx++)
         {
@@ -165,11 +165,11 @@ public class StandardSetsUT
     [TestMethod]
     public void VerifyWhiteSpace()
     {
-        Assert.AreEqual(4, StandardSets.WhiteSpace.Count);
-        Assert.IsTrue(StandardSets.WhiteSpace.Contains(Characters.Space));
-        Assert.IsTrue(StandardSets.WhiteSpace.Contains('\n'));
-        Assert.IsTrue(StandardSets.WhiteSpace.Contains('\r'));
-        Assert.IsTrue(StandardSets.WhiteSpace.Contains('\t'));
+        Assert.HasCount(4, StandardSets.WhiteSpace);
+        Assert.Contains(Characters.Space, StandardSets.WhiteSpace);
+        Assert.Contains('\n', StandardSets.WhiteSpace);
+        Assert.Contains('\r', StandardSets.WhiteSpace);
+        Assert.Contains('\t', StandardSets.WhiteSpace);
     }
 }
 
