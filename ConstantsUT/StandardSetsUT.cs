@@ -162,6 +162,60 @@ public class StandardSetsUT
             nameof(StandardSets.HexDigits));
     }
 
+    private static readonly IInterval<char> _lowerAlpha = new Interval<char>("[a, z]");
+    private static readonly IInterval<char> _upperAlpha = new Interval<char>("[A, Z]");
+    private static readonly IInterval<char> _numerics = new Interval<char>("[0, 9]");
+    private static readonly IImmutableSet<char> _b64stdTail = ['+', '/', '='];
+    private static readonly IImmutableSet<char> _b64urlTail = ['-', '_', '='];
+
+    [TestMethod]
+    public void VerifyNumericBase64Digits()
+    {
+        Assert.HasCount(65, StandardSets.StdBase64Digits);
+
+        foreach(var item in StandardSets.NumericBase64Digits)
+        {
+            Console.WriteLine($"Checking '{item}'");
+            var isValid = _lowerAlpha.Contains(item)
+                || _upperAlpha.Contains(item)
+                || _numerics.Contains(item)
+                || _b64stdTail.Contains(item);
+            Assert.IsTrue(isValid);
+        }
+    }
+
+    [TestMethod]
+    public void VerifyStdBase64Digits()
+    {
+        Assert.HasCount(65, StandardSets.StdBase64Digits);
+
+        foreach(var item in StandardSets.StdBase64Digits)
+        {
+            Console.WriteLine($"Checking '{item}'");
+            var isValid = _lowerAlpha.Contains(item)
+                || _upperAlpha.Contains(item)
+                || _numerics.Contains(item)
+                || _b64stdTail.Contains(item);
+            Assert.IsTrue(isValid);
+        }
+    }
+
+    [TestMethod]
+    public void VerifyStdBase64UrlTail()
+    {
+        Assert.HasCount(65, StandardSets.UrlBase64Digits);
+
+        foreach(var item in StandardSets.UrlBase64Digits)
+        {
+            Console.WriteLine($"Checking '{item}'");
+            var isValid = _lowerAlpha.Contains(item)
+                || _upperAlpha.Contains(item)
+                || _numerics.Contains(item)
+                || _b64urlTail.Contains(item);
+            Assert.IsTrue(isValid);
+        }
+    }
+
     [TestMethod]
     public void VerifyWhiteSpace()
     {

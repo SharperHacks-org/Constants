@@ -4,7 +4,7 @@ using System.Collections.Immutable;
 
 namespace SharperHacks.CoreLibs.Constants;
 
-using CtrlCodes = AsciiControlCodes;
+//using CtrlCodes = AsciiControlCodes;
 
 /// <summary>
 /// A collection of immutable hash sets.
@@ -15,118 +15,18 @@ public static partial class StandardSets
 
     private static ImmutableHashSet<char>? _asciiCtrlCodes;
 
-    private static readonly char[] _upperAlphaChars =
-    [
-        'A',
-        'B',
-        'C',
-        'D',
-        'E',
-        'F',
-        'G',
-        'H',
-        'I',
-        'J',
-        'K',
-        'L',
-        'M',
-        'N',
-        'O',
-        'P',
-        'Q',
-        'R',
-        'S',
-        'T',
-        'U',
-        'V',
-        'W',
-        'X',
-        'Y',
-        'Z'
-    ];
     private static ImmutableHashSet<char>? _upperAlphaCharSet;
 
-    private static readonly char[] _lowerAlphaChars =
-    [
-        'a',
-        'b',
-        'c',
-        'd',
-        'e',
-        'f',
-        'g',
-        'h',
-        'i',
-        'j',
-        'k',
-        'l',
-        'm',
-        'n',
-        'o',
-        'p',
-        'q',
-        'r',
-        's',
-        't',
-        'u',
-        'v',
-        'w',
-        'x',
-        'y',
-        'z'
-    ];
     private static ImmutableHashSet<char>? _lowerAlphaCharSet;
 
-    private static readonly char[] _decimalChars =
-    [
-        '0',
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6',
-        '7',
-        '8',
-        '9'
-    ];
     private static ImmutableHashSet<char>? _decimalCharSet;
 
-    private static readonly char[] _hexChars =
-    [
-        '0', // U+0030
-        '1', // U+0031
-        '2', // U+0032
-        '3', // U+0033
-        '4', // U+0034
-        '5', // U+0035
-        '6', // U+0036
-        '7', // U+0037
-        '8', // U+0038
-        '9', // U+0039
-        'A', // U+0041
-        'a', // U+0061
-        'B', // U+0042
-        'b', // U+0062
-        'C', // U+0043
-        'c', // U+0063
-        'D', // U+0044
-        'd', // U+0064
-        'E', // U+0045
-        'e', // U+0065
-        'F', // U+0046
-        'f'  // U+0066
-    ];
     private static ImmutableHashSet<char>? _hexCharSet;
 
-    // ToDo: Are there other characters that should be part of this set?
-    private static readonly char[] _whiteSpace =
-    [
-        Characters.Space,
-        CtrlCodes.LF, //'\n',
-        CtrlCodes.CR, //'\r',
-        CtrlCodes.TAB, //'\t',
-    ];
+    private static ImmutableHashSet<char>? _numericBase64Chars;
+    private static ImmutableHashSet<char>? _stdBase64Chars;
+    private static ImmutableHashSet<char>? _urlBase64CharSet;
+
     private static ImmutableHashSet<char>? _whiteSpaceCharSet;
 
     #endregion Private
@@ -134,32 +34,54 @@ public static partial class StandardSets
     /// <summary>
     /// ASCII control codes. First 32 characters of the ASCII table.
     /// </summary>
-    public static ImmutableHashSet<char> AsciiControlCodes => _asciiCtrlCodes ??= [.. CtrlCodes.AsArray];
+    public static ImmutableHashSet<char> AsciiControlCodes => 
+        _asciiCtrlCodes ??= [.. ImmutableArrays.AsciiControlCodes];
 
     /// <summary>
     /// Upper alpha character code points (US-EN)
     /// </summary>
-    public static ImmutableHashSet<char> UpperAlphaCharacters => _upperAlphaCharSet ??= [.. _upperAlphaChars];
+    public static ImmutableHashSet<char> UpperAlphaCharacters =>
+        _upperAlphaCharSet ??= [.. ImmutableArrays.UpperAlphaCharacters];
 
     /// <summary>
     /// Lower alpha character code points (US-EN)
     /// </summary>
-    public static ImmutableHashSet<char> LowerAlphaCharacters => _lowerAlphaCharSet ??= [.. _lowerAlphaChars];
+    public static ImmutableHashSet<char> LowerAlphaCharacters =>
+        _lowerAlphaCharSet ??= [.. ImmutableArrays.LowerAlphaCharacters];
 
     /// <summary>
     /// Decimal digit code points.
     /// </summary>
-    public static ImmutableHashSet<char> DecimalDigits => _decimalCharSet ??= [.. _decimalChars];
+    public static ImmutableHashSet<char> DecimalDigits => 
+        _decimalCharSet ??= [.. ImmutableArrays.DecimalDigits];
 
     /// <summary>
     /// Hex digit code points.
     /// </summary>
-    public static ImmutableHashSet<char> HexDigits => _hexCharSet ??= [.. _hexChars];
+    public static ImmutableHashSet<char> HexDigits => 
+        _hexCharSet ??= [.. ImmutableArrays.HexChars];
+
+    public static ImmutableHashSet<char> NumericBase64Digits =>
+        _numericBase64Chars ??= [.. ImmutableArrays.NumericBase64Chars];
 
     /// <summary>
-    /// Non-printable characters, commonly used for horizontal and vertical whitespace/control characters.
+    /// Standard base 64 code points, as per RFC 4648.
     /// </summary>
-    public static ImmutableHashSet<char> WhiteSpace => _whiteSpaceCharSet ??= [.. _whiteSpace];
+    public static ImmutableHashSet<char> StdBase64Digits => 
+        _stdBase64Chars ??= [.. ImmutableArrays.StdBase64Chars];
+
+    /// <summary>
+    /// URL base 64 code points, as per RFC 4648.
+    /// </summary>
+    public static ImmutableHashSet<char> UrlBase64Digits => 
+        _urlBase64CharSet ??= [.. ImmutableArrays.UrlBase64Chars];
+
+    /// <summary>
+    /// Non-printable characters, commonly used for horizontal and vertical 
+    /// whitespace/control characters.
+    /// </summary>
+    public static ImmutableHashSet<char> WhiteSpace => 
+        _whiteSpaceCharSet ??= [.. ImmutableArrays.WhiteSpaceChars];
 }
 
 // Copyright Joseph W Donahue and Sharper Hacks LLC (US-WA)

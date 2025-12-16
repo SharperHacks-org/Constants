@@ -88,7 +88,6 @@ public static class AsciiControlCodes
                 US
                 ];
         }
-
     }
 }
 
