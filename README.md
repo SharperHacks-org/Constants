@@ -1,5 +1,7 @@
 ![SharperHacks logo](https://raw.githubusercontent.com/SharperHacks-org/Assets/main/Images/SHLLC-Logo.png)
-# Constants Library for .NET
+# THIS PROJECT MOVED TO [codeberg.org](https://codeberg.org/SharperHacks-org/Constants)
+# THIS REPO WILL BE REMOVED SOON.
+## Constants Library for .NET
 ## SharperHacks.CoreLibs.Constants.
 
 Defines useful constants grouped by class.
@@ -28,3 +30,4 @@ A collection of standard time symbols (WIP).
 
 #### Strings
 A colleciton of useful string constants (WIP).
+
